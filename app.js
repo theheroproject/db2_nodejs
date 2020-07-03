@@ -1,4 +1,4 @@
-//var ibm_db = require('ibm_db');
+var ibm_db = require('ibm_db');
 var setting = require('./setting');
 
 let db_str = "DATABASE=" + setting.db_name +
@@ -10,7 +10,7 @@ let db_str = "DATABASE=" + setting.db_name +
 let sql = "select * from test";
 
 ibm_db.open(db_str, function(err, conn) {
-    if (err) return consol.log(err);
+    if (err) return console.log(err);
 
     conn.query(sql, function(err, data) {
         if (err) {
