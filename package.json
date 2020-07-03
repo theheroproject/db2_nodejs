@@ -1,0 +1,14 @@
+{
+    "name": "db2-nodejs",
+    "version": "1.0.0",
+    "description": "",
+    "main": "",
+    "scripts": {
+        "start": "node app.js",
+        "debug": "node app.js product=true"
+    },
+    "license": "Apache",
+    "dependencies": {
+        "ibm_db": "^2.7.0"
+    }
+}
