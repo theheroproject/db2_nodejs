@@ -1,0 +1,16 @@
+version: '2'
+services:
+  db2:
+    image: ibmcom/db2
+    container_name: mydb2
+    privileged: true
+    ports:
+      - 50000:50000
+    environment:
+      - LICENSE=accept
+      - DB2INST1_PASSWORD=db2inst1
+      - DBNAME=testdb
+      - instance_name=testdb
+    command: db2start
+    volumes:
+      - ./database:/database
